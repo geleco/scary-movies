@@ -1,0 +1,76 @@
+/* Estilos gerais do cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #030917; /* Cor de fundo do cabeçalho */
+  color: white;
+}
+
+/* Estilos do container do logo para controlar o tamanho */
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Estilos para a imagem do logo para garantir que ela se ajuste e mantenha proporção */
+.header-logo {
+  max-width: 100px; /* Ajuste conforme necessário */
+  max-height: 100px; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+/* Estilos do container da barra de pesquisa para centralização */
+.search-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos da barra de pesquisa para preencher o espaço do seu container */
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  /* Adicione mais estilos aqui como borda, sombra, etc. */
+}
+
+/* Estilos do container do botão de logout para alinhamento à direita */
+.logout-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos do botão de logout */
+.logout-button {
+  padding: 8px 16px;
+  background-color: #f66020; /* Cor do botão de logout */
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  /* outros estilos para o botão de logout */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda em dispositivos móveis */
+  }
+
+  .logo-container,
+  .search-container,
+  .logout-container {
+    width: 100%; /* Faz cada container ocupar toda a largura disponível */
+  }
+
+  .search-input,
+  .logout-button {
+    margin-top: 10px; /* Adiciona espaço entre os elementos quando estão empilhados */
+  }
+}
