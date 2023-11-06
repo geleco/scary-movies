@@ -1,18 +1,34 @@
 import React from 'react';
 import './App.css';
-import HomePage from './Components/HomePage';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// Importar os componentes corrigidos
 import Header from './Components/Header';
+import HomePage from './Components/HomePage';
+import LoginPage from './Components/LoginPage';
+import RegisterPage from './Components/RegisterPage';
 
 function App() {
-    return (
-        <div className="App">
-            <header>
-                <Header/>
-            </header>
-            <main>
-            </main>
-        </div>
-    );
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <nav>
+          {/* Links para navegação */}
+          <Link to="/">Home</Link> | <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
+        </nav>
+        <main>
+          <Routes>
+            {/* Configuração das rotas */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            {/* Adicione mais rotas conforme necessário */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
