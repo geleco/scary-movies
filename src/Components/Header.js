@@ -4,15 +4,15 @@ import './styles/Header.css';
 
 function Header() {
   return (
-<header class="header">
-  <div class="logo-container">
+<header className="header">
+  <div className="logo-container">
   <img src={logo} alt="Logo" className="header-logo" />
   </div>
-  <div class="search-container">
-    <input type="text" class="search-input" placeholder="Adicione um filme de terror" />
+  <div className="search-container">
+    <input type="text" className="search-input" placeholder="Adicione um filme de terror" />
   </div>
-  <div class="logout-container">
-    <button class="logout-button">Logout</button>
+  <div className="logout-container">
+    <button className="logout-button" onClick={handleLogout}>Logout</button>
   </div>
 </header>
   );
