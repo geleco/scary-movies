@@ -1,0 +1,10 @@
+body {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  font-family: "Arial", sans-serif; /* Exemplo de fonte */
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}
