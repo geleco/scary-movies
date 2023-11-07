@@ -13,11 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <nav>
-          {/* Links para navegação */}
-          <Link to="/">Home</Link> | <Link to="/login">Login</Link> | <Link to="/register">Register</Link>
-        </nav>
-        <main>
+                <main>
           <Routes>
             {/* Configuração das rotas */}
             <Route path="/" element={<HomePage />} />

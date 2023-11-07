@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
+}
+
 .App {
   text-align: center;
 }
