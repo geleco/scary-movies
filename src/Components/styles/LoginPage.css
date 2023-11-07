@@ -1,7 +1,7 @@
 body {
-  background-color: #000; /* Fundo preto */
-  color: #fff; /* Texto branco */
-  font-family: "Arial", sans-serif; /* Exemplo de fonte */
+  background-color: #000;
+  color: #fff;
+  font-family: "Arial", sans-serif;
 }
 @media (max-width: 768px) {
 }
@@ -15,15 +15,13 @@ body {
   flex-shrink: 0;
 }
 .Login_box {
-  background-color: #010516;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
   max-width: 400px;
   width: 100%;
   border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .form-group {
@@ -48,4 +46,13 @@ body {
   background: #d9d9d9;
   width: 393px;
   height: 52px;
+}
+.span_login {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+input::placeholder {
+  margin: 10px;
+  font-size: 17.32424px;
 }

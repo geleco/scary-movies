@@ -15,7 +15,6 @@ function LoginPage() {
     <div className="Login_page">
       <img src={logo} alt="Logo" className="Background_logo" />
       <div className="Login_box">
-      <h1>Log in</h1>
        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input type="text" placeholder="usuário" className="input_usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -24,8 +23,7 @@ function LoginPage() {
             <input type="password" placeholder="senha" className="input_senha" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <button type="submit" className="button_login">Entrar</button> 
-          <p>ou</p><br/>
-          <Link to="/register">Cadastre-se</Link>
+          <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
         </form>
       </div>
     </div>
