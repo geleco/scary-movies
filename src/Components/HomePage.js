@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles/HomePage.css'
-import Header from './Header_corrected';
+
 
 function HomePage() {
   return (
     <div>
-    <Header/>
+
     </div>
   );
 }
