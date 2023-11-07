@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import logo from './assets/logo.png';
 import './styles/LoginPage.css';
-
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -22,9 +21,13 @@ function LoginPage() {
           <div className="form-group">
             <input type="password" placeholder="senha" className="input_senha" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
+          <Link to="/">
           <button type="submit" className="button_login">Entrar</button> 
+          </Link>
+         
           <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
         </form>
+       
       </div>
     </div>
   );
