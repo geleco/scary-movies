@@ -40,6 +40,7 @@ body {
   width: 393px;
   height: 52.791px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .input_usuario {
   border-radius: 20px;
