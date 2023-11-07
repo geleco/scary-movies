@@ -16,10 +16,10 @@ function LoginPage() {
       <div className="Login_box">
        <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input type="text" placeholder="usuário" className="input_usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" placeholder="     usuário" className="input_usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div className="form-group">
-            <input type="password" placeholder="senha" className="input_senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder="     senha" className="input_senha" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <Link to="/">
           <button type="submit" className="button_login">Entrar</button> 
