@@ -18,9 +18,8 @@ function Header() {
   );
 }
 
-// Função de placeholder para o manejo do logout
 function handleLogout() {
-  console.log('Logout clicked'); // Aqui você faria a lógica de logout
+  console.log('Logout clicked');
 }
 
 export default Header;

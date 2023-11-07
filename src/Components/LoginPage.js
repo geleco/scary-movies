@@ -9,7 +9,6 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder for submit logic
     console.log(username, password);
   };
 
