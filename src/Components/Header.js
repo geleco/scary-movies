@@ -1,10 +1,9 @@
-
 import React from "react";
 import logo from "./assets/logo.png";
 import "./styles/Header.css";
 import { Link } from "react-router-dom";
 
-function Header({ hideSearchBar }) {
+function Header({ hideSearchBar, showLogout = true }) { // Define o valor padrão de showLogout como true
   const handleLogout = () => {
     console.log("Logout clicked");
   };
@@ -25,11 +24,13 @@ function Header({ hideSearchBar }) {
           placeholder="Adicione um filme de terror"
         />
       </div>
-      <div className="logout-container">
-        <button className="nav-link" onClick={handleLogout}>
-          Logout
-        </button>
-      </div>
+      {showLogout && ( // Usa a propriedade showLogout para controlar a visibilidade do botão de logout
+        <div className="logout-container">
+          <button className="nav-link" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      )}
     </header>
   );
 }

@@ -13,7 +13,7 @@ function LoginPage() {
 
   return (
     <><div>
-      <Header hideSearchBar={true} />
+       <Header hideSearchBar={true} showLogout={false}/>
     </div><div className="Login_page">
         <img src={logo} alt="Logo" className="Background_logo" />
         <div className="Login_box">
