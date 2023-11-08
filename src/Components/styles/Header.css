@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-/* Estilos gerais do cabeçalho */
+* {
+  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -8,18 +11,14 @@
   padding: 10px;
   background-color: #030917; /* Cor de fundo do cabeçalho */
   color: white;
-  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
 }
 
-/* Estilos do container do logo para controlar o tamanho */
 .logo-container {
-  flex: 1;
+  flex: 1; /* Permite que o container do logo cresça */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
-/* Estilos para a imagem do logo para garantir que ela se ajuste e mantenha proporção */
 .header-logo {
   max-width: 100px; /* Ajuste conforme necessário */
   max-height: 100px; /* Ajuste conforme necessário */
@@ -27,74 +26,70 @@
 }
 
 nav {
-margin-right: 80px;
+  flex: 2; /* Aumenta a flexibilidade da navegação para centralizar os botões */
+  display: flex;
+  justify-content: center; /* Centraliza os botões da navegação */
+  align-items: center;
 }
 
 .nav-link {
   padding: 8px 16px;
-  background-color: #f66020; /* Cor do botão de logout */
+  background-color: #f66020; /* Cor do botão */
   border: none;
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  margin: 10px;
   text-decoration: none;
+  margin: 0 20px; /* Aumenta a margem para separar os botões */
 }
 
-/* Estilos do container da barra de pesquisa para centralização */
 .search-container {
-  flex: 2;
+  flex: 3; /* Dá mais espaço para a barra de pesquisa */
   display: flex;
   justify-content: center;
 }
 
-/* Estilos da barra de pesquisa para preencher o espaço do seu container */
 .search-input {
   width: 100%;
   padding: 8px;
   border-radius: 20px;
-  /* Adicione mais estilos aqui como borda, sombra, etc. */
 }
 
-/* Estilos do container do botão de logout para alinhamento à direita */
 .logout-container {
-  flex: 1;
+  flex: 1; /* Permite que o container do logout cresça */
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  padding: 8px 16px;
-  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
 }
 
-/* Estilos do botão de logout */
 .logout-button {
+  padding: 8px 16px;
   background-color: #f66020; /* Cor do botão de logout */
   border: none;
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  margin: 10px;
   text-decoration: none;
-  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
 }
 
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    align-items: flex-start; /* Alinha os itens à esquerda em dispositivos móveis */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
   }
 
-  .logo-container,
-  .search-container,
-  .logout-container {
-    width: 100%;
-    font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
-  }
-
+  .header-logo,
+  .nav-link,
   .search-input,
-  .logout-button,
-  .nav-link {
-    margin-top: 10px;
-    font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
+  .logout-button {
+    padding: 4px 8px; /* Reduz o padding para economizar espaço */
+    font-size: smaller; /* Reduz o tamanho da fonte para economizar espaço */
+  }
+
+  .nav-link,
+  .logout-button {
+    margin-left: 5px; /* Reduz a margem entre os botões */
   }
 }
