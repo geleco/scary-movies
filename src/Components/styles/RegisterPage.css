@@ -8,3 +8,43 @@ body {
 
 @media (max-width: 480px) {
 }
+.Background_logo {
+  max-width: 400px;
+  max-height: auto;
+  flex-shrink: 0;
+}
+.Register_box {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+.input_senha {
+  border-radius: 20px;
+  background: #d9d9d9;
+  width: 393px;
+  height: 52px;
+  margin-top: 10px;
+}
+.Button_Register {
+  margin-top: 10px;
+  border-radius: 20px;
+  background: #37c6f3;
+  width: 393px;
+  height: 52.791px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.input_usuario {
+  border-radius: 20px;
+  background: #d9d9d9;
+  width: 393px;
+  height: 52px;
+}

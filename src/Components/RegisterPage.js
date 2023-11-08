@@ -16,10 +16,13 @@ function RegisterPage() {
       <img src={logo} alt="Logo" className="Background_logo" />
       <div className="Register_box">
         <form onSubmit={handleSubmit}>
-          <h1> Cadastre-se </h1>
-          <span>Usuário<input type="text" placeholder="usuário" value={username} onChange={(e) => setUsername(e.target.value)} /></span>
-          <span>Senha<input type="password" placeholder="senha" value={password} onChange={(e) => setPassword(e.target.value)} /></span>
-          <button type="submit">Cadastre-se</button>
+          <div className="form-group">
+          <input className="input_usuario" type="     text" placeholder="usuário" value={username} onChange={(e) => setUsername(e.target.value)} />
+          </div>
+          <div className="form-group">
+          <input className="input_senha" type="     password" placeholder="senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <button className="Button_Register" type="submit">Cadastre-se</button>
         </form>
       </div>
     </div>
