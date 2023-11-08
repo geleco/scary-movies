@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import './styles/RegisterPage.css';
 import logo from './assets/logo.png';
-
+import { Link } from "react-router-dom";
 function RegisterPage() {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,12 +19,19 @@ function RegisterPage() {
       <div className="Register_box">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-          <input className="input_usuario" type="     text" placeholder="usuário" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input className="input_usuario" type="text" placeholder="     Usuário" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div className="form-group">
-          <input className="input_senha" type="     password" placeholder="senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className="input-mail" type="text" placeholder="     E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className="form-group">
+          <input className="input_senha" type="password" placeholder="     Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <div className="form-group">
+          <input className="input_senha" type="password" placeholder="     Confirmar senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           </div>
           <button className="Button_Register" type="submit">Cadastre-se</button>
+          <span className="span_register">Já tem uma conta?<Link to="/login">Faça o login</Link></span>
         </form>
       </div>
     </div>

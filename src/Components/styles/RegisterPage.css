@@ -43,6 +43,13 @@ body {
   cursor: pointer;
 }
 .input_usuario {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #d9d9d9;
+  width: 393px;
+  height: 52px;
+}
+.input-mail {
   border-radius: 20px;
   background: #d9d9d9;
   width: 393px;
