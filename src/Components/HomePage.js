@@ -1,13 +1,14 @@
 import React from 'react';
-import './styles/HomePage.css'
-
+import Header from './Header'; // Você precisa adicionar o caminho correto para o seu componente Header aqui
+import './styles/HomePage.css';
 
 function HomePage() {
-  return (
-    <div>
-
-    </div>
-  );
+    return (
+        <div>
+            <Header hideSearchBar={false} />
+            {/* ... resto do seu HomePage ... */}
+        </div>
+    );
 }
 
 export default HomePage;

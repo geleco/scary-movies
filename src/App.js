@@ -12,7 +12,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
                 <main>
           <Routes>
             {/* Configuração das rotas */}

@@ -4,7 +4,7 @@ import logo from "./assets/logo.png";
 import "./styles/Header.css";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ hideSearchBar }) {
   const handleLogout = () => {
     console.log("Logout clicked");
   };
@@ -18,7 +18,7 @@ function Header() {
         <Link to="/" className="nav-link">Home</Link> <Link to="/login" className="nav-link">Login</Link>{" "}
         <Link to="/register" className="nav-link">Registro</Link>
       </nav>
-      <div className="search-container">
+      <div className="search-container" style={{ display: hideSearchBar ? 'none' : 'block' }}>
         <input
           type="text"
           className="search-input"
