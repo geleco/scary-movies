@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 // Importar os componentes corrigidos
 import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';

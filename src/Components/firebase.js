@@ -1,21 +1,20 @@
-
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC4cdUypn_cHxPtFBTXYpUNMHtcpQwYgTs",
-  authDomain: "scarymovies-18270.firebaseapp.com",
-  projectId: "scarymovies-18270",
-  storageBucket: "scarymovies-18270.appspot.com",
-  messagingSenderId: "925900984547",
-  appId: "1:925900984547:web:a293bec2726a7705f675d6",
-  measurementId: "G-RLFPL2L4NS"
+  apiKey: "AIzaSyCVDDqmW9xfk9U6LJOwl5Y9mebCvnMABDI",
+  authDomain: "scarymovies-c54a0.firebaseapp.com",
+  projectId: "scarymovies-c54a0",
+  storageBucket: "scarymovies-c54a0.appspot.com",
+  messagingSenderId: "819096964738",
+  appId: "1:819096964738:web:0fe89c187716e7da20ee9b",
+  measurementId: "G-Z0QLQ93SGD"
 };
-
 const app = initializeApp(firebaseConfig); 
-
 const auth = getAuth(app); 
+const firestore = getFirestore(app);
 const analytics = getAnalytics(app);
 
-export { auth, analytics }; 
+export { auth, firestore, analytics };
