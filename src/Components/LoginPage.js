@@ -29,7 +29,7 @@ function LoginPage() {
             </Link>
             <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
           </form>
-
+<p>asdasd</p>
         </div>
       </div></>
   );
