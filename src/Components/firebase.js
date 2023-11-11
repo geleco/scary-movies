@@ -16,5 +16,10 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); 
 const firestore = getFirestore(app);
 const analytics = getAnalytics(app);
+const {logger} = require("firebase-functions");
+const {initializeApp} = require("firebase-admin/app");
+const {getFirestore} = require("firebase-admin/firestore");
 
-export { auth, firestore, analytics };
+initializeApp();
+
+export { auth, firestore, analytics, logger };
