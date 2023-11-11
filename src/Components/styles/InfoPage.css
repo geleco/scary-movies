@@ -1,0 +1,72 @@
+.filme-info-container {
+  width: 100%;
+}
+
+.movie-synopsis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-right: 900px;
+}
+
+.movie-info {
+  display: flex;
+  align-items: flex-start; /* Alterado para iniciar à esquerda */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.halloween {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px; /* Adicionado para cantos arredondados */
+}
+
+.movie-info div {
+  flex: 1;
+  max-width: 800px;
+}
+
+.movie-info h2 {
+  font-size: 36px; /* Aumentado o tamanho da fonte */
+  margin-bottom: 10px;
+  color: #fff; /* Adicionado para tornar o texto branco */
+}
+
+.synopsis {
+  font-size: 18px; /* Aumentado o tamanho da fonte */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd; /* Adicionado para tornar o texto cinza claro */
+}
+
+.trailer-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #e50914; /* Vermelho da Netflix */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.trailer-link:hover {
+  color: #bf081f; /* Vermelho mais escuro ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .movie-info {
+    flex-direction: column;
+    align-items: center; /* Ajustado para centralizar em telas menores */
+  }
+
+  .halloween {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .movie-info div {
+    max-width: 100%;
+  }
+}

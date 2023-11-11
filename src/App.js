@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 // Importar os componentes corrigidos
-import Header from './Components/Header';
 import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';
 import RegisterPage from './Components/RegisterPage';
+import InfoPage from './Components/InfoPage';
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/info" element={<InfoPage />} />
             {/* Adicione mais rotas conforme necessário */}
           </Routes>
         </main>
