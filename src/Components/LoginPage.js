@@ -27,7 +27,6 @@ function LoginPage() {
             <Link to="/">
               <button type="submit" className="button_login">Entrar</button>
             </Link>
-<p>iai</p>
             <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
           </form>
 
