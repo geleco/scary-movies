@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import './styles/RegisterPage.css';
-import logo from './assets/logo.png';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth, firestore } from './firebase.js';
 import { collection, addDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import Header from "./Header";
+import './styles/RegisterPage.css';
+import logo from './assets/logo.png';
 
 function RegisterPage() {
+  const navigate = useNavigate(); // Use useNavigate para a versão 6 do React Router
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,12 +40,11 @@ function RegisterPage() {
 
       const user = userCredential.user;
 
-      // Adicionar o usuário ao Firestore
       await addUser(username, email);
 
       // Redirecionar para a tela de login ou fazer qualquer outra ação desejada
       // Exemplo de redirecionamento:
-      // history.push("/login");
+      navigate("/login");
     } catch (error) {
       setError(error.message);
     }
