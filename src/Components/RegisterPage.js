@@ -14,7 +14,7 @@ function RegisterPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-
+  const [successMessage, setSuccessMessage] = useState("");
   const addUser = async (username, email) => {
     try {
       const userRef = collection(firestore, 'users');
@@ -41,10 +41,10 @@ function RegisterPage() {
       const user = userCredential.user;
 
       await addUser(username, email);
-
-      // Redirecionar para a tela de login ou fazer qualquer outra ação desejada
-      // Exemplo de redirecionamento:
-      navigate("/login");
+      setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000); 
     } catch (error) {
       setError(error.message);
     }
@@ -71,6 +71,7 @@ function RegisterPage() {
             </div>
             {error && <p className="error-message">{error.toString()}</p>}
             <button className="Button_Register" type="submit">Cadastre-se</button>
+            {successMessage && <p className="success-message">{successMessage}</p>}
             <span className="span_register">Já tem uma conta?<Link to="/login">Faça o login</Link></span>
           </form>
         </div>

@@ -24,12 +24,12 @@ function LoginPage() {
       setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
      setTimeout(() => {
         navigate("/");
-      }, 2000); // Redireciona após 2 segundos (ajuste conforme necessário)
+      }, 2000); 
     } catch (error) {
       console.error('Erro de autenticação:', error.message);
       setFailMessage("Você não possue conta, registre-se");
       setTimeout(() => {
-        setFailMessage("");}, 2000)
+        setFailMessage("");}, 2000);
     }
   };
 
