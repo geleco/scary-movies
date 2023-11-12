@@ -9,7 +9,7 @@ function LoginPage() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [successMessage, setSuccessMessage] = useState(""); // Novo estado para a mensagem de sucesso
+  const [successMessage, setSuccessMessage] = useState(""); 
   const [FailMessage, setFailMessage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
