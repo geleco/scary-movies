@@ -1,3 +1,5 @@
+/* InfoPage.css */
+
 .filme-info-container {
   width: 100%;
 }
@@ -17,11 +19,17 @@
   margin: 0 auto;
 }
 
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .halloween {
   width: 300px;
   height: 450px;
   object-fit: cover;
-  margin-right: 20px;
+  margin-bottom: 10px;
   border-radius: 8px;
 }
 
@@ -40,4 +48,52 @@ video {
   width: 1000px;
   border-radius: 8px;
   height: 500px;
+}
+
+.trailer-container {
+  margin-left: 110px;
+}
+
+.buttons-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.watched-button,
+.not-watched-button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.watched-button {
+  background-color: green;
+}
+
+.not-watched-button {
+  background-color: red;
+}
+
+/* Adicione esta regra de mídia para telas menores */
+@media screen and (max-width: 768px) {
+  .movie-info {
+    flex-direction: column; /* Altera a direção do flex container para coluna */
+    align-items: center; /* Centraliza os itens na coluna */
+  }
+
+  .trailer-container {
+    margin-top: 20px; /* Adiciona margem superior para separar o vídeo dos itens acima */
+    margin-left: 0; /* Remove a margem à esquerda */
+  }
+
+  .responsive-video {
+    width: 100%; /* Tornando o vídeo 100% da largura do contêiner para telas menores */
+    height: auto; /* Ajustando automaticamente a altura para manter a proporção */
+    border-radius: 8px;
+  }
 }

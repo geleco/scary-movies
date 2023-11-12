@@ -1,95 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
+/* Aplicando a fonte em todo o documento */
 * {
-  font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
+    font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
 }
 
+/* Estilização do cabeçalho */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #030917; /* Cor de fundo do cabeçalho */
-  color: white;
-}
-
-.logo-container {
-  flex: 1; /* Permite que o container do logo cresça */
-  display: flex;
-  align-items: center;
-}
-
-.header-logo {
-  max-width: 100px; /* Ajuste conforme necessário */
-  max-height: 100px; /* Ajuste conforme necessário */
-  height: auto;
-}
-
-nav {
-  flex: 2; /* Aumenta a flexibilidade da navegação para centralizar os botões */
-  display: flex;
-  justify-content: center; /* Centraliza os botões da navegação */
-  align-items: center;
-}
-
-.nav-link {
-  padding: 8px 16px;
-  background-color: #f66020; /* Cor do botão */
-  border: none;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  margin: 0 20px; /* Aumenta a margem para separar os botões */
-}
-
-.search-container {
-  flex: 3; /* Dá mais espaço para a barra de pesquisa */
-  display: flex;
-  justify-content: center;
-}
-
-.search-input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 20px;
-}
-
-.logout-container {
-  flex: 1; /* Permite que o container do logout cresça */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.logout-button {
-  padding: 8px 16px;
-  background-color: #f66020; /* Cor do botão de logout */
-  border: none;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-around;
+    display: flex;
     align-items: center;
-    padding: 5px;
-  }
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #030917; /* Cor de fundo do cabeçalho */
+    color: white;
+}
 
-  .header-logo,
-  .nav-link,
-  .search-input,
-  .logout-button {
-    padding: 4px 8px; /* Reduz o padding para economizar espaço */
-    font-size: smaller; /* Reduz o tamanho da fonte para economizar espaço */
-  }
+/* Container do logo */
+.logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
-  .nav-link,
-  .logout-button {
-    margin-left: 5px; /* Reduz a margem entre os botões */
-  }
+/* Logo */
+.header-logo {
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+}
+
+/* Navegação */
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Links de navegação */
+.nav-link {
+    padding: 8px 16px;
+    background-color: #f66020; /* Cor do botão */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+/* Container da barra de pesquisa */
+.search-container {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulário de pesquisa */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+/* Input de pesquisa */
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+/* Botão de pesquisa */
+.search-button {
+    padding: 8px 16px;
+    background-color: #f66020; /* Cor do botão */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #f67240; /* Cor ao passar o mouse */
+}
+
+/* Container de logout */
+.logout-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Botão de logout */
+.logout-button {
+    padding: 8px 16px;
+    background-color: #f66020; /* Cor do botão de logout */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .header-logo,
+    .nav-link,
+    .search-input,
+    .logout-button {
+        padding: 4px 8px;
+        font-size: smaller;
+    }
+
+    .nav-link,
+    .logout-button {
+        margin-left: 5px;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    /* Estilizações específicas para dispositivos móveis */
 }
