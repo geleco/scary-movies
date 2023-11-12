@@ -2,9 +2,55 @@ body {
   background-color: #000; /* Fundo preto */
   color: #fff; /* Texto branco */
   font-family: "Arial", sans-serif; /* Exemplo de fonte */
-}
-@media (max-width: 768px) {
+  margin: 0;
+  padding: 0;
 }
 
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os cartões de filmes */
+  padding: 20px;
+}
+
+.movie {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px; /* Largura fixa para desktop */
+}
+
+.movie h3 {
+  margin: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .movie {
+      width: 150px; /* Largura menor para tablets */
+  }
+}
+
+/* Estilos para dispositivos móveis */
 @media (max-width: 480px) {
+  .movies-container {
+      justify-content: space-around;
+  }
+
+  .movie {
+      width: 100%; /* Largura total em dispositivos móveis */
+  }
+
+  .movie img {
+      height: 200px; /* Altura fixa para imagens em dispositivos móveis */
+  }
 }
