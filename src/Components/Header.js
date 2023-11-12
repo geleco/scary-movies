@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./assets/logo.png";
 import "./styles/Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Header({ hideSearchBar, showLogout = true }) { // Define o valor padrão de showLogout como true
+function Header({ hideSearchBar, showLogout = true }) {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     console.log("Logout clicked");
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/?search=${searchTerm}`);
   };
 
   return (
@@ -14,17 +22,24 @@ function Header({ hideSearchBar, showLogout = true }) { // Define o valor padrã
         <img src={logo} alt="Logo" className="header-logo" />
       </div>
       <nav>
-        <Link to="/" className="nav-link">Home</Link> <Link to="/login" className="nav-link">Login</Link>{" "}
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/login" className="nav-link">Login</Link>
         <Link to="/register" className="nav-link">Registro</Link>
       </nav>
       <div className="search-container" style={{ display: hideSearchBar ? 'none' : 'block' }}>
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Adicione um filme de terror"
-        />
+      <form onSubmit={handleSearchSubmit} className="search-form">
+    <input
+        type="text"
+        className="search-input"
+        placeholder="Adicione um filme de terror"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+    />
+    <button type="submit" className="search-button">Pesquisar</button>
+</form>
+
       </div>
-      {showLogout && ( // Usa a propriedade showLogout para controlar a visibilidade do botão de logout
+      {showLogout && (
         <div className="logout-container">
           <button className="nav-link" onClick={handleLogout}>
             Logout
