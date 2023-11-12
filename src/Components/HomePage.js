@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import './styles/HomePage.css';
+import hallo from "./assets/Halloween.jpg";
 import { Link, useLocation } from 'react-router-dom';
 
 function HomePage() {
@@ -47,11 +48,14 @@ function HomePage() {
                     </div>
                 ))}
             </div>
-            <div>
-                <Link to="/info">
-                    <button type="submit" className="button_login">Informação</button>
-                </Link>
-            </div>
+            {/* Adicione a imagem como um link para a página de trailer */}
+            <Link to="/info">
+                <img
+                    className="trailer-button"
+                    src={hallo}
+                    alt="Halloween"
+                />
+            </Link>
         </div>
     );
 }

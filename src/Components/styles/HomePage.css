@@ -21,6 +21,15 @@ body {
   width: 200px; /* Largura fixa para desktop */
 }
 
+.trailer-button {
+  position: flex; /* Ajuste conforme necessário para a posição vertical */
+  margin-right: 1000px; /* Ajuste conforme necessário para a posição horizontal */
+  width: 130px; /* Ajuste conforme necessário para a largura da imagem */
+  height: auto;
+  cursor: pointer;
+  /* Adicione mais estilos de acordo com suas preferências */
+}
+
 .movie h3 {
   margin: 10px;
   font-size: 1.2em;
