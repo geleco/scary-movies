@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import hallo from "./assets/Halloween.jpg";
+import alouu from "./assets/halou.mp4"
 import "./styles/InfoPage.css";
 import Header from './Header';
 
@@ -11,16 +11,13 @@ const FilmeInfo = ({ filme }) => {
         <div className="movie-info">
           <img src={hallo} alt="Hallo" className="halloween" />
           <div>
-            <h2>Halloween</h2>
-            <p className="synopsis">teste sinopse</p>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="trailer-link"
-            >
-              Assistir ao Trailer
-            </a>
+            <div className="trailer-container">
+              <video width="560" height="315" controls>
+                <source src={alouu} alt="halouu" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <h2>Halloween</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -29,3 +26,4 @@ const FilmeInfo = ({ filme }) => {
 };
 
 export default FilmeInfo;
+
