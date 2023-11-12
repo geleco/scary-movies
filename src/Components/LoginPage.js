@@ -27,10 +27,9 @@ function LoginPage() {
             <Link to="/">
               <button type="submit" className="button_login">Entrar</button>
             </Link>
-
             <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
           </form>
-
+<p>asdasd</p>
         </div>
       </div></>
   );

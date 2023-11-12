@@ -6,8 +6,7 @@ import Header from './Header';
 
 const FilmeInfo = ({ filme }) => {
   return (
-    <div className="filme-info-container">
-      <Header hideSearchBar={false} />
+    <><div><Header hideSearchBar={false} /></div><div className="filme-info-container">
       <div className="movie-synopsis">
         <div className="movie-info">
           <img src={hallo} alt="Hallo" className="halloween" />
@@ -22,7 +21,7 @@ const FilmeInfo = ({ filme }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 
