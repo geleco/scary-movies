@@ -23,7 +23,7 @@ function LoginPage() {
      
       setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
      setTimeout(() => {
-        navigate("/");
+        navigate("/home");
       }, 2000); 
     } catch (error) {
       console.error('Erro de autenticação:', error.message);

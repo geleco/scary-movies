@@ -22,8 +22,8 @@ function Header({ hideSearchBar, showLogout = true }) {
         <img src={logo} alt="Logo" className="header-logo" />
       </div>
       <nav>
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/login" className="nav-link">Login</Link>
+        <Link to="/home" className="nav-link">Home</Link>
+        <Link to="/" className="nav-link">Login</Link>
         <Link to="/register" className="nav-link">Registro</Link>
       </nav>
       <div className="search-container" style={{ display: hideSearchBar ? 'none' : 'block' }}>

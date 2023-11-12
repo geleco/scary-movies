@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Importar os componentes corrigidos
-import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';
+import HomePage from './Components/HomePage';
 import RegisterPage from './Components/RegisterPage';
 import InfoPage from './Components/InfoPage';
 
@@ -14,8 +14,8 @@ function App() {
                 <main>
           <Routes>
             {/* Configuração das rotas */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/info" element={<InfoPage />} />
             {/* Adicione mais rotas conforme necessário */}

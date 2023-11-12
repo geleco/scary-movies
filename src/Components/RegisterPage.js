@@ -43,7 +43,7 @@ function RegisterPage() {
       await addUser(username, email);
       setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
       setTimeout(() => {
-        navigate("/login");
+        navigate("/");
       }, 2000); 
     } catch (error) {
       setError(error.message);
@@ -72,7 +72,7 @@ function RegisterPage() {
             {error && <p className="error-message">{error.toString()}</p>}
             <button className="Button_Register" type="submit">Cadastre-se</button>
             {successMessage && <p className="success-message">{successMessage}</p>}
-            <span className="span_register">Já tem uma conta?<Link to="/login">Faça o login</Link></span>
+            <span className="span_register">Já tem uma conta?<Link to="/">Faça o login</Link></span>
           </form>
         </div>
       </div>
