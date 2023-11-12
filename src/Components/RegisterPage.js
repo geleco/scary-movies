@@ -69,7 +69,7 @@ function RegisterPage() {
             <div className="form-group">
               <input className="input_senha" type="password" placeholder="Confirmar senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
             </div>
-            {error && <p className="error-message">{error}</p>}
+            {error && <p className="error-message">{error.toString()}</p>}
             <button className="Button_Register" type="submit">Cadastre-se</button>
             <span className="span_register">Já tem uma conta?<Link to="/login">Faça o login</Link></span>
           </form>

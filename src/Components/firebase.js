@@ -4,14 +4,15 @@ import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCVDDqmW9xfk9U6LJOwl5Y9mebCvnMABDI",
-  authDomain: "scarymovies-c54a0.firebaseapp.com",
-  projectId: "scarymovies-c54a0",
-  storageBucket: "scarymovies-c54a0.appspot.com",
-  messagingSenderId: "819096964738",
-  appId: "1:819096964738:web:0fe89c187716e7da20ee9b",
-  measurementId: "G-Z0QLQ93SGD"
+  apiKey: "AIzaSyBjfrTnIuxlu0FmI_dGjRZ30KrsuJgFTgo",
+  authDomain: "scary-movies-2023-868b8.firebaseapp.com",
+  projectId: "scary-movies-2023-868b8",
+  storageBucket: "scary-movies-2023-868b8.appspot.com",
+  messagingSenderId: "687171111254",
+  appId: "1:687171111254:web:04b6eb7fcedb4274106ef7",
+  measurementId: "G-L82CD9Q0SR"
 };
+
 const app = initializeApp(firebaseConfig); 
 const auth = getAuth(app); 
 const firestore = getFirestore(app);
