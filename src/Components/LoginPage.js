@@ -9,27 +9,28 @@ function LoginPage() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [successMessage, setSuccessMessage] = useState(""); 
+  const [successMessage, setSuccessMessage] = useState("");
   const [FailMessage, setFailMessage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const auth = getAuth();
-  
+
     try {
       const userCredential = await signInWithEmailAndPassword(auth, username, password);
       console.log(userCredential.user);
 
-     
+
       setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
-     setTimeout(() => {
+      setTimeout(() => {
         navigate("/home");
-      }, 2000); 
+      }, 2000);
     } catch (error) {
       console.error('Erro de autenticação:', error.message);
       setFailMessage("Você não possue conta, registre-se");
       setTimeout(() => {
-        setFailMessage("");}, 2000);
+        setFailMessage("");
+      }, 2000);
     }
   };
 
@@ -49,7 +50,15 @@ function LoginPage() {
               <input type="password" placeholder="Senha" className="input_senha" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
             <button type="submit" className="button_login">Entrar</button>
-            <span className="span_login">Não tem uma conta?<Link to="/register">Registre-se</Link></span>
+            <div className="info-button-login">
+              <span className="span_senha">
+                <span><Link to="/">Esqueceu a senha?</Link></span>
+              </span>
+              <span className="span_cadastre-se">
+                <span><Link to="/register">Cadastre-se</Link></span>
+              </span>
+            </div>
+
           </form>
           {successMessage && <p className="success-message">{successMessage}</p>}
           {FailMessage && <p class name="fail-message">{FailMessage}</p>}

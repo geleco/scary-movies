@@ -72,7 +72,7 @@ function RegisterPage() {
             {error && <p className="error-message">{error.toString()}</p>}
             <button className="Button_Register" type="submit">Cadastre-se</button>
             {successMessage && <p className="success-message">{successMessage}</p>}
-            <span className="span_register">Já tem uma conta?<Link to="/">Faça o login</Link></span>
+            <span >Já tem uma conta?<Link to="/" className="span_register">Faça o login</Link></span>
           </form>
         </div>
       </div>
