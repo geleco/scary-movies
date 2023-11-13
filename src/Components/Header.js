@@ -31,7 +31,7 @@ function Header({ hideSearchBar, showLogout = true }) {
     <input
         type="text"
         className="search-input"
-        placeholder="Adicione um filme de terror"
+        placeholder="Pesquise um filme de terror"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
     />

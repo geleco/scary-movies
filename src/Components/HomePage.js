@@ -44,18 +44,12 @@ function HomePage() {
                 {movies.map(movie => (
                     <div key={movie.id} className="movie">
                         <h3>{movie.nome}</h3>
-                        <img src={movie.urlImagem} alt={movie.nome} />
+                        <Link to={`/info/${movie.id}`}>
+                            <img src={movie.urlImagem} alt={movie.nome} />
+                        </Link>
                     </div>
                 ))}
             </div>
-            {/* Adicione a imagem como um link para a página de trailer */}
-            <Link to="/info">
-                <img
-                    className="trailer-button"
-                    src={hallo}
-                    alt="Halloween"
-                />
-            </Link>
         </div>
     );
 }
