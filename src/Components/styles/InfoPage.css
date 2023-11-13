@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-right: 900px;
+  margin-right: auto; /* Centralizado */
 }
 
 .movie-info {
@@ -25,14 +25,6 @@
   align-items: center;
 }
 
-.halloween {
-  width: 300px;
-  height: 450px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
 .movie-info div {
   flex: 1;
   max-width: 800px;
@@ -44,14 +36,15 @@
   color: #fff;
 }
 
-video {
-  width: 1000px;
-  border-radius: 8px;
-  height: 500px;
+.trailer-container {
+  margin-top: 20px;
+  width: 100%;
 }
 
-.trailer-container {
-  margin-left: 110px;
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .buttons-container {
@@ -61,39 +54,53 @@ video {
 
 .watched-button,
 .not-watched-button {
-  border: none;
+  border: 2px solid transparent;
   padding: 10px 20px;
   margin-right: 10px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  color: #fff;
   font-weight: bold;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  color: white;
 }
 
 .watched-button {
-  background-color: green;
+  background-color: #4CAF50;
 }
 
 .not-watched-button {
-  background-color: red;
+  background-color: #f44336;
 }
 
-/* Adicione esta regra de mídia para telas menores */
+.watched-button:hover,
+.not-watched-button:hover {
+  background-color: transparent;
+  border-color: currentColor;
+  color: black;
+}
+
+/* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
   .movie-info {
-    flex-direction: column; /* Altera a direção do flex container para coluna */
-    align-items: center; /* Centraliza os itens na coluna */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info h2 {
+    font-size: 24px;
   }
 
   .trailer-container {
-    margin-top: 20px; /* Adiciona margem superior para separar o vídeo dos itens acima */
-    margin-left: 0; /* Remove a margem à esquerda */
+    margin-left: 0;
   }
 
-  .responsive-video {
-    width: 100%; /* Tornando o vídeo 100% da largura do contêiner para telas menores */
-    height: auto; /* Ajustando automaticamente a altura para manter a proporção */
-    border-radius: 8px;
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .watched-button,
+  .not-watched-button {
+    margin-bottom: 10px;
   }
 }

@@ -6,7 +6,7 @@ import "./styles/InfoPage.css";
 const InfoPage = () => {
     const [filme, setFilme] = useState(null);
     const [borderColor, setBorderColor] = useState(null);
-    const { movieId } = useParams(); // Capturando o ID do filme da URL
+    const { movieId } = useParams();
 
     useEffect(() => {
         const url = `http://localhost:8080/movies/${movieId}`;
@@ -25,7 +25,6 @@ const InfoPage = () => {
         setBorderColor('red');
     };
 
-    // Renderização condicional
     if (!filme) {
         return (
             <>
@@ -52,7 +51,16 @@ const InfoPage = () => {
                                 </button>
                             </div>
                         </div>
-                        {/* Aqui você pode adicionar o trailer ou outros detalhes do filme */}
+                        <div className="trailer-container">
+                            {/* Substitua 'TRAILER_ID' pelo ID do trailer do YouTube */}
+                            <iframe
+                                src={`https://www.youtube.com/embed/TRAILER_ID`}
+                                frameBorder="0"
+                                allowFullScreen
+                                className="responsive-video"
+                                title="Trailer do Filme"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
