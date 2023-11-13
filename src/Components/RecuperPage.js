@@ -33,15 +33,16 @@ function ForgotPassword() {
                 <>
                     <p>Insira o seu e-mail para receber um link de redefinição de senha.</p>
                     <input
+                    className='input_recuper_senha'
                         type="email"
                         placeholder="Digite seu e-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <button onClick={handleResetPassword}>Enviar E-mail</button>
+                    <button className='Recuper_senha_button' onClick={handleResetPassword}>Enviar E-mail</button>
                     <div>
                     <Link to='/'>
-                   <button>Voltar</button>
+                   <button className='Exit_button'>Voltar</button>
                    </Link>
                     </div>
                 </>
