@@ -41,9 +41,12 @@ function Header({ hideSearchBar, showLogout = true }) {
       </div>
       {showLogout && (
         <div className="logout-container">
-          <button className="nav-link" onClick={handleLogout}>
+        <Link to= '/'>
+        <button className="nav-link" onClick={handleLogout}>
             Logout
           </button>
+        </Link>
+          
         </div>
       )}
     </header>

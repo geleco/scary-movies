@@ -27,7 +27,7 @@ function HomePage() {
 
     return (
         <div>
-            <Header hideSearchBar={false} />
+            <Header hideSearchBar={false} showLogout={true} />
             <div className="movies-container">
                 {movies.map(movie => (
                     <div key={movie.id} className={`movie ${movie.watchedStatus}`}>

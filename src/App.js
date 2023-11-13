@@ -5,7 +5,7 @@ import LoginPage from './Components/LoginPage';
 import HomePage from './Components/HomePage';
 import RegisterPage from './Components/RegisterPage';
 import InfoPage from './Components/InfoPage';
-
+import RecuperPage from './Components/RecuperPage';
 function App() {
   return (
     <Router>
@@ -17,6 +17,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/info/:movieId" element={<InfoPage />} />
+            <Route path="/RecuperPage" element={<RecuperPage />} />
             {/* Adicione mais rotas conforme necessário */}
           </Routes>
         </main>

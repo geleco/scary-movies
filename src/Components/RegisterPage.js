@@ -41,7 +41,7 @@ function RegisterPage() {
       const user = userCredential.user;
 
       await addUser(username, email);
-      setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
+      setSuccessMessage("Cadastro efetuado com sucesso!!!!!!");
       setTimeout(() => {
         navigate("/");
       }, 2000); 
@@ -72,7 +72,7 @@ function RegisterPage() {
             {error && <p className="error-message">{error.toString()}</p>}
             <button className="Button_Register" type="submit">Cadastre-se</button>
             {successMessage && <p className="success-message">{successMessage}</p>}
-            <span className="span_register">Já tem uma conta?<Link to="/">Faça o login</Link></span>
+            <span >Já tem uma conta?<Link to="/" className="span_register">Faça o login</Link></span>
           </form>
         </div>
       </div>
