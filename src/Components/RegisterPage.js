@@ -41,7 +41,7 @@ function RegisterPage() {
       const user = userCredential.user;
 
       await addUser(username, email);
-      setSuccessMessage("Login bem-sucedido! Redirecionando para a Homepage...");
+      setSuccessMessage("Cadastro efetuado com sucesso!!!!!!");
       setTimeout(() => {
         navigate("/");
       }, 2000); 

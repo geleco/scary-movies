@@ -52,7 +52,7 @@ function LoginPage() {
             <button type="submit" className="button_login">Entrar</button>
             <div className="info-button-login">
               <span className="span_senha">
-                <span><Link to="/">Esqueceu a senha?</Link></span>
+                <span><Link to="/RecuperPage">Esqueceu a senha?</Link></span>
               </span>
               <span className="span_cadastre-se">
                 <span><Link to="/register">Cadastre-se</Link></span>
