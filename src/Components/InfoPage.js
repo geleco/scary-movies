@@ -22,8 +22,8 @@ const InfoPage = () => {
             body: JSON.stringify(status)
         })
         .then(() => {
-            // Atualizar o estado local do filme
             setFilme({ ...filme, watchedStatus: status });
+            window.location.href = '/home'; // Redireciona para a HomePage
         })
         .catch(error => console.error('Error updating movie status:', error));
     };
