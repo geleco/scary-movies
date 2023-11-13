@@ -1,7 +1,7 @@
 body {
-  background-color: #000; /* Fundo preto */
-  color: #fff; /* Texto branco */
-  font-family: "Arial", sans-serif; /* Exemplo de fonte */
+  background-color: #000;
+  color: #fff;
+  font-family: "Arial", sans-serif; 
 }
 @media (max-width: 768px) {
 }
