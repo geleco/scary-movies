@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// Importar os componentes corrigidos
 import LoginPage from './Components/LoginPage';
 import HomePage from './Components/HomePage';
 import RegisterPage from './Components/RegisterPage';
@@ -17,7 +16,7 @@ function App() {
             <Route path="/" element={<LoginPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/info" element={<InfoPage />} />
+            <Route path="/info/:movieId" element={<InfoPage />} />
             {/* Adicione mais rotas conforme necessário */}
           </Routes>
         </main>

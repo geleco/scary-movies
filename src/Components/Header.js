@@ -13,7 +13,7 @@ function Header({ hideSearchBar, showLogout = true }) {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    navigate(`/?search=${searchTerm}`);
+    navigate(`/home?search=${searchTerm}`);
   };
 
   return (

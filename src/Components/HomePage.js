@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import './styles/HomePage.css';
-import hallo from "./assets/Halloween.jpg";
 import { Link, useLocation } from 'react-router-dom';
 
 function HomePage() {
