@@ -9,7 +9,6 @@ const InfoPage = () => {
     const { movieId } = useParams(); // Capturando o ID do filme da URL
 
     useEffect(() => {
-        // Substitua esta URL pela URL do seu backend para buscar os detalhes do filme
         const url = `http://localhost:8080/movies/${movieId}`;
 
         fetch(url)
@@ -18,19 +17,23 @@ const InfoPage = () => {
             .catch(error => console.error('Error fetching movie:', error));
     }, [movieId]);
 
-    if (!filme) {
-        return <div>Carregando...</div>;
-    }
-
     const handleWatchedClick = () => {
         setBorderColor('green');
-        // Adicione lógica adicional aqui, se necessário
     };
 
     const handleNotWatchedClick = () => {
         setBorderColor('red');
-        // Adicione lógica adicional aqui, se necessário
     };
+
+    // Renderização condicional
+    if (!filme) {
+        return (
+            <>
+                <Header hideSearchBar={false} />
+                <div className="loading-container">Carregando...</div>
+            </>
+        );
+    }
 
     return (
         <>
@@ -49,9 +52,7 @@ const InfoPage = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="trailer-container">
-                            {/* Substitua pelo elemento de vídeo ou outro conteúdo relevante */}
-                        </div>
+                        {/* Aqui você pode adicionar o trailer ou outros detalhes do filme */}
                     </div>
                 </div>
             </div>
