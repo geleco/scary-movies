@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-right: auto; /* Centralizado */
 }
 
 .movie-info {
@@ -25,23 +24,35 @@
   align-items: center;
 }
 
-.movie-info div {
-  flex: 1;
-  max-width: 800px;
+.movie-image {
+  width: 300px; /* Largura padrão */
+  height: 450px; /* Altura padrão */
+  object-fit: cover; /* Mantém a proporção */
+  cursor: pointer; /* Indica que a imagem é clicável */
+  transition: transform 0.3s ease; /* Para um efeito suave ao redimensionar */
 }
 
-.movie-info h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #fff;
+.movie-image:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}
+
+.trailer-container iframe {
+  width: 100%; /* Ocupa toda a largura do container */
+  height: 100%; /* Altura fixa, pode ajustar conforme necessário */
+  border-radius: 8px;
+  margin-left: 100%;
 }
 
 .trailer-container {
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  max-width: 800px; /* Define uma largura máxima, ajuste conforme necessário */
 }
 
-.video-container iframe {
+.responsive-video {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -61,26 +72,27 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  color: white;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;
 }
 
 .watched-button {
-  background-color: #4CAF50;
+  background-color: #006400; /* Verde escuro */
+  color: white;
 }
 
 .not-watched-button {
-  background-color: #f44336;
+  background-color: #8B0000; /* Vermelho escuro */
+  color: white;
 }
 
 .watched-button:hover,
 .not-watched-button:hover {
-  background-color: transparent;
   border-color: currentColor;
-  color: black;
+  color: yellow;
+  transform: scale(1.05);
 }
 
-/* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
   .movie-info {
     flex-direction: column;
@@ -91,10 +103,16 @@
     font-size: 24px;
   }
 
-  .trailer-container {
-    margin-left: 0;
+  .movie-image {
+    width: 100%; /* Largura total em telas menores */
+    max-width: 300px; /* Largura máxima para manter a proporção */
+    height: auto; /* Altura auto para manter a proporção */
   }
 
+  .trailer-container iframe {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: auto; /* Mantém a proporção */
+}
   .buttons-container {
     flex-direction: column;
   }

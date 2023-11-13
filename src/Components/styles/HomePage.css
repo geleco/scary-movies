@@ -42,6 +42,17 @@ body {
   object-fit: cover;
 }
 
+.movie.watched {
+  /* Estilo para filmes assistidos */
+  background-color: rgba(0, 255, 0, 0.3); /* Exemplo: verde claro */
+}
+
+.movie.notWatched {
+  /* Estilo para filmes não assistidos */
+  background-color: rgba(255, 0, 0, 0.3); /* Exemplo: vermelho claro */
+}
+
+
 /* Estilos para tablets */
 @media (max-width: 768px) {
   .movie {

@@ -7,41 +7,30 @@ function HomePage() {
     const [movies, setMovies] = useState([]);
     const location = useLocation();
 
-    // Extrair o termo de pesquisa da URL
-    const searchParams = new URLSearchParams(location.search);
-    const searchTerm = searchParams.get('search');
-
     useEffect(() => {
-        // URL do endpoint de busca
-        const url = searchTerm
-            ? `http://localhost:8080/movies/search?name=${searchTerm}`
-            : `http://localhost:8080/movies`;
+        // Função para buscar filmes
+        const fetchMovies = () => {
+            const searchParams = new URLSearchParams(location.search);
+            const searchTerm = searchParams.get('search');
+            const url = searchTerm
+                ? `http://localhost:8080/movies/search?name=${searchTerm}`
+                : `http://localhost:8080/movies`;
 
-        fetch(url)
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Falha na resposta da rede.');
-                }
-            })
-            .then(data => {
-                if (Array.isArray(data)) {
-                    setMovies(data);
-                } else {
-                    console.error('Data is not an array:', data);
-                    setMovies([]); // Resetando para array vazio se os dados não forem um array
-                }
-            })
-            .catch(error => console.error('Error fetching movies:', error));
-    }, [searchTerm]); // Dependência: searchTerm
+            fetch(url)
+                .then(response => response.ok ? response.json() : Promise.reject('Falha na resposta da rede.'))
+                .then(data => Array.isArray(data) ? setMovies(data) : console.error('Data is not an array:', data))
+                .catch(error => console.error('Error fetching movies:', error));
+        };
+
+        fetchMovies();
+    }, [location]); // Dependência: location
 
     return (
         <div>
             <Header hideSearchBar={false} />
             <div className="movies-container">
                 {movies.map(movie => (
-                    <div key={movie.id} className="movie">
+                    <div key={movie.id} className={`movie ${movie.watchedStatus}`}>
                         <h3>{movie.nome}</h3>
                         <Link to={`/info/${movie.id}`}>
                             <img src={movie.urlImagem} alt={movie.nome} />
