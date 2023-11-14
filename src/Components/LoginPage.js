@@ -37,7 +37,7 @@ function LoginPage() {
   return (
     <>
       <div>
-        <Header hideSearchBar={true} showLogout={false} />
+      <Header hideSearchBar={true} showLogout={false} hideNavLinks={true} />
       </div>
       <div className="Login_page">
         <img src={logo} alt="Logo" className="Background_logo" />

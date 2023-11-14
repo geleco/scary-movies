@@ -2,7 +2,7 @@
 
 /* Aplicando a fonte em todo o documento */
 * {
-    font-family: 'Creepster', cursive; /* ou 'Nosifer', cursive; */
+    font-family: 'Creepster', cursive;
 }
 
 /* Estilização do cabeçalho */
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #030917; /* Cor de fundo do cabeçalho */
+    background-color: #030917;
     color: white;
 }
 
@@ -40,7 +40,7 @@ nav {
 /* Links de navegação */
 .nav-link {
     padding: 8px 16px;
-    background-color: #f66020; /* Cor do botão */
+    background-color: #f66020;
     border: none;
     color: white;
     border-radius: 4px;
@@ -73,7 +73,7 @@ nav {
 /* Botão de pesquisa */
 .search-button {
     padding: 8px 16px;
-    background-color: #f66020; /* Cor do botão */
+    background-color: #f66020;
     border: none;
     color: white;
     border-radius: 4px;
@@ -81,7 +81,7 @@ nav {
 }
 
 .search-button:hover {
-    background-color: #f67240; /* Cor ao passar o mouse */
+    background-color: #f67240;
 }
 
 /* Container de logout */
@@ -95,7 +95,7 @@ nav {
 /* Botão de logout */
 .logout-button {
     padding: 8px 16px;
-    background-color: #f66020; /* Cor do botão de logout */
+    background-color: #f66020;
     border: none;
     color: white;
     border-radius: 4px;
@@ -103,30 +103,64 @@ nav {
     text-decoration: none;
 }
 
+/* Estilização do ícone do menu hambúrguer */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     .header {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
-        padding: 5px;
-    }
-
-    .header-logo,
-    .nav-link,
-    .search-input,
-    .logout-button {
-        padding: 4px 8px;
-        font-size: smaller;
     }
 
     .nav-link,
     .logout-button {
-        margin-left: 5px;
+        margin: 5px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .search-container, .logout-container {
+        width: 100%;
     }
 }
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
-    /* Estilizações específicas para dispositivos móveis */
+    .header-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-link, .logout-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .search-input {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }

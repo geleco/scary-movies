@@ -52,7 +52,7 @@ function RegisterPage() {
 
   return (
     <div>
-      <Header hideSearchBar={true} showLogout={false} />
+     <Header hideSearchBar={true} showLogout={false} hideNavLinks={true} />
       <div className="Register_page">
         <img src={logo} alt="Logo" className="Background_logo" />
         <div className="Register_box">
