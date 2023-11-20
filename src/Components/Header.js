@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import logo from "./assets/logo.png";
 import "./styles/Header.css";
 import { Link, useNavigate } from "react-router-dom";
-import FontSizeContext from './FontSizeContext'; // Importe o FontSizeContext
+import FontSizeContext from './FontSizeContext'; 
 
 function Header({ hideSearchBar, showLogout = true, hideNavLinks = false }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -58,9 +58,6 @@ function Header({ hideSearchBar, showLogout = true, hideNavLinks = false }) {
           </Link>
         </div>
       )}
-
-      {/* Botão para aumentar o tamanho da fonte */}
-      <button onClick={increaseFontSize}>Aumentar Fonte</button>
     </header>
   );
 }
