@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import logo from "./assets/logo.png";
 import "./styles/Header.css";
 import { Link, useNavigate } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import FontSizeContext from './FontSizeContext'; 
+>>>>>>> 36e87dbfe37fb5aca79a541234d96642f83d890e
 
 function Header({ hideSearchBar, showLogout = true, hideNavLinks = false }) {
   const [searchTerm, setSearchTerm] = useState('');
