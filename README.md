@@ -1,75 +1,21 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🎬 Scary Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao **Scary Movies**, o seu catálogo pessoal para filmes de terror! 🧛‍♂️👻
 
-## Available Scripts
+## Sobre o Projeto
+Scary Movies é um site responsivo, perfeito tanto para dispositivos móveis quanto para desktops. Nosso objetivo é simples: ajudar você a catalogar todos os filmes de terror que já assistiu e manter um registro de quais já viu. Diga adeus às noites em que você não conseguia lembrar se já tinha visto aquele filme de terror com a casa mal-assombrada ou o vampiro vegetariano!
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+- **React**: Para uma interface de usuário dinâmica e assustadoramente boa.
+- **Spring Boot**: Para um backend ágil e robusto, rápido como um zumbi correndo atrás de cérebros.
+- **Firebase**: Autenticação segura, porque até nos filmes de terror, segurança é importante.
 
-### `npm start`
+## Instalação
+Siga os passos padrão para instalação de projetos React e Spring Boot. Se você já conjurou servidores e invocou componentes React antes, estará em casa. (`npm install`, `npm start`) e Spring Boot (`./mvnw spring-boot:run` ou executar a aplicação via sua IDE).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como Contribuir
+Seus sustos e arrepios podem ajudar a melhorar o Scary Movies! Contribuições são bem-vindas. Sinta-se livre para clonar, criar um branch, adicionar suas melhorias e nos enviar um pull request. Juntos, podemos fazer a melhor biblioteca de filmes de terror que já existiu!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contato
+Tem alguma ideia arrepiante ou feedback? Abra uma issue aqui no GitHub ou envie um pull request.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# scary-movies
-site sobre adicionar filmes de terror que ja assistiu e o que gostaria de assistir
->>>>>>> 87724468d633ca5af0674277a21ee11ad094e66c
